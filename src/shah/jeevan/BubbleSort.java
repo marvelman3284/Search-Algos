@@ -1,5 +1,7 @@
 package shah.jeevan;
 
+import java.util.Arrays;
+
 public class BubbleSort {
     public static void bubbleSort(int[] arr) {
         int n = arr.length;
@@ -12,6 +14,6 @@ public class BubbleSort {
                 }
             }
         }
-        System.out.println(arr);
+        System.out.println(Arrays.toString(arr));
     }
 }

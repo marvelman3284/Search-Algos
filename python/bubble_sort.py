@@ -22,7 +22,7 @@ def gen_random_list(l: int, min: int, max: int) -> list[int]:
 if __name__ == "__main__":
     arr = [64, 34, 25, 12, 22, 11, 90]
 
-    print(bubbleSort(arr))
+    bubbleSort(arr)
 
 #     print ("Sorted array is:")
 #     for i in range(len(arr)):
