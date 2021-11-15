@@ -13,6 +13,8 @@ public class Main {
         Collections.sort(l);
 //        LinearSearch.search(l, find);
         BinarySearch.search(l, find);
+        int[] arr = {45,6, 7, 32, 1, 2, 0, 56, 70, 99};
+        BubbleSort.bubbleSort(arr);
     }
 
     public static ArrayList<Integer> genRandomArr(int length, int max) {
