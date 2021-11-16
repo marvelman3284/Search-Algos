@@ -8,21 +8,30 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        ArrayList<Integer> l = genRandomArr(2000, 100);
+        ArrayList<Integer> l = genRandomList(2000, 100);
         int find = l.get(rand.nextInt(l.size()));
-        Collections.sort(l);
-//        LinearSearch.search(l, find);
-        BinarySearch.search(l, find);
-        int[] arr = {45,6, 7, 32, 1, 2, 0, 56, 70, 99};
+        int[] arr = genRandomArr(200, 1000);
+        LinearSearch.search(l, find);
         BubbleSort.bubbleSort(arr);
+        Collections.sort(l);
+        BinarySearch.search(l, find);
     }
 
-    public static ArrayList<Integer> genRandomArr(int length, int max) {
+    public static ArrayList<Integer> genRandomList(int length, int max) {
         ArrayList<Integer> l = new ArrayList<>();
         Random rand = new Random();
         for (int i = 0; i < length; i++) {
             l.add(rand.nextInt(max));
         }
         return l;
+    }
+
+    public static int[] genRandomArr(int length, int max) {
+        int[] arr = new int[length];
+        Random rand = new Random();
+        for (int i = 0; i < length; i++) {
+            arr[i] = rand.nextInt(max);
+        }
+        return arr;
     }
 }
