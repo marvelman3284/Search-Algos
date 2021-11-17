@@ -11,10 +11,11 @@ public class Main {
         ArrayList<Integer> l = genRandomList(2000, 100);
         int find = l.get(rand.nextInt(l.size()));
         int[] arr = genRandomArr(200, 1000);
-        LinearSearch.search(l, find);
-        BubbleSort.bubbleSort(arr);
-        Collections.sort(l);
-        BinarySearch.search(l, find);
+//        LinearSearch.search(l, find);
+//        BubbleSort.bubbleSort(arr);
+//        Collections.sort(l);
+//        BinarySearch.search(l, find);
+        QuickSort.quickSort(l);
     }
 
     public static ArrayList<Integer> genRandomList(int length, int max) {
