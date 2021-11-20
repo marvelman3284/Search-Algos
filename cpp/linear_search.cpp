@@ -9,7 +9,7 @@ int sort(const int (&arr)[10], int find_val) {
       cout << "Value " << find_val << " found at index " << i << endl;
       return 0;
     }
-  } 
+  }
   return 1;
 }
 

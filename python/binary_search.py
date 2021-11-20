@@ -1,4 +1,5 @@
-import math, random
+import math
+from random import randint
 
 def binary_search(lst: list[int], search_value: int) -> None:
     low = 1
@@ -14,11 +15,19 @@ def binary_search(lst: list[int], search_value: int) -> None:
             low = mid + 1
 
 
+def gen_random_arr(length: int, min: int, max: int):
+    arr = [] 
+    for _ in range(length):
+        arr.append(randint(min, max))
+
+    find = arr[randint(0, len(lst)-1)]
+
+    return arr, find
+
+
+
 if __name__ == "__main__":
-    lst = []
+    lst, find = gen_random_arr(100, 0, 10000)
 
-    for i in range(1000):
-        lst.append(i)
-
-    binary_search(lst, random.randint(0, 999))
+    print(binary_search(lst, find))
 

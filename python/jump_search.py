@@ -1,32 +1,31 @@
 import math
+from random import randint
+
 def jump_search(arr: list[int], find_val: int):
     jump = math.floor(math.sqrt(len(arr))) 
     step = jump
     for _ in range(len(arr)):
-        print(step)
         if arr[step] < find_val:
             step += jump
         if arr[step] > find_val:
             step -= jump
             for i in arr[0:step]:
                 if i == find_val:
-                   return f"Index at {i}"
+                   return f"Value {find_val} found at index at {i}"
                 else: continue
+ 
+def gen_random_arr(length: int, min: int, max: int):
+    arr = [] 
+    for _ in range(length):
+        arr.append(randint(min, max))
 
-    
-#     for i in range(len(arr)):
-#         i += jump
-#         if arr[i] == find_val:
-#         elif arr[i] > find_val:
-#             for j in arr[:jump]:
-#                if j == find_val:
-#                    return f"Index at {arr.index(j)}"
-#                else: continue
-#         elif arr[i] < find_val:
-#             for j in arr[jump:]:
-#                 if j == find_val:
-#                    return f"Index at {arr.index(j)}"
-#                 else: continue
-# 
+    find = arr[randint(0, len(arr)-1)]
 
-print(jump_search([1, 2, 3, 4, 5, 6, 7, 8, 9], 5))
+    return arr, find
+
+def main():
+    arr, find = gen_random_arr(100, 0, 10000)
+    print(jump_search(arr, find))
+
+if __name__ == "__main__":
+    main()

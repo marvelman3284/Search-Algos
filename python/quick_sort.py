@@ -28,5 +28,5 @@ def gen_random_arr(length: int, min: int, max: int) -> list[int]:
 
     return res
 
-
-print(f"Total time taken: {time.time() - start}")
+if __name__ == "__main__":
+    print(f"Total time taken: {time.time() - start}")
