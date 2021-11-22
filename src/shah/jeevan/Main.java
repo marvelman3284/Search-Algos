@@ -8,12 +8,6 @@ public class Main {
     public static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-	// write your code here
-
-        ArrayList<Integer> l = genRandomList(2000, 100);
-        int find = l.get(rand.nextInt(l.size()));
-        int[] arr = genRandomArr(50, 100);
-
         System.out.println("Would you like a sorting(1) or searching(2) algorithm?[1, 2]: ");
         int which = sc.nextInt();
         switch (which){
@@ -24,11 +18,6 @@ public class Main {
                 searching();
             }
         }
-//        LinearSearch.search(l, find);
-//        BubbleSort.bubbleSort(arr);
-//        Collections.sort(l);
-//        BinarySearch.search(l, find);
-//        QuickSort.quickSort(l);
     }
 
     public static void searching() {
@@ -38,6 +27,7 @@ public class Main {
         switch (which) {
             case 1: {
                 ArrayList<Integer> l = genRandomList(2000,10000);
+                Collections.sort(l);
                 int find = l.get(rand.nextInt(l.size()));
                 BinarySearch.search(l, find);
             }
