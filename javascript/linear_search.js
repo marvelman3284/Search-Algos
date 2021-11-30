@@ -17,8 +17,8 @@ let genRandomList = (long) => {
 
 let arr = genRandomList(10)
 let find = arr[Math.floor(Math.random() * (arr.length + 1))]
-console.log(find)
-console.log(arr)
+console.log(`Searching for value ${find}`)
+console.log(`Array: \n ${arr}`)
 let search = linear_search(arr, find)
 
-console.debug(search)
+console.debug(`Value ${find} found at index ${search}`)

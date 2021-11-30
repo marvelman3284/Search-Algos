@@ -1,5 +1,5 @@
 from os import system as run
-from random import randint
+from random import randint, shuffle
 import time
 
 def sort(arr: list[int]) -> list[int]:
@@ -10,10 +10,8 @@ def sort(arr: list[int]) -> list[int]:
     while not done:
         try:
             iters += 1
-            val1 = randint(0, len(arr)-1)
-            val2 = randint(0, len(arr)-1)
-
-            arr[val1], arr[val2] = arr[val2], arr[val1]
+            
+            shuffle(arr)
 
             run('clear')
             print(f"Iteration number: {iters}")
@@ -36,5 +34,5 @@ def gen_random_arr(length: int, min: int, max: int) -> list[int]:
     return res
 
 if __name__ == "__main__":
-    arr = gen_random_arr(5, 0, 10)
+    arr = gen_random_arr(11, 0, 10)
     sort(arr)
