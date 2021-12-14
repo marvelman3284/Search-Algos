@@ -34,5 +34,5 @@ def gen_random_arr(length: int, min: int, max: int) -> list[int]:
     return res
 
 if __name__ == "__main__":
-    arr = gen_random_arr(11, 0, 10)
+    arr = gen_random_arr(10, 0, 10)
     sort(arr)
