@@ -14,6 +14,7 @@ public class LinearSearch {
         System.out.println("What number would you like to search for?");
         int search=input.nextInt();
         search(array,search);
+        search(array, 0);
     }
 
     public static void search(ArrayList<Integer> lst, Integer findVal) {
